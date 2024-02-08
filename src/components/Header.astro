@@ -1,0 +1,198 @@
+<header>
+    <!-- <div class="anounce">
+        <strong>
+            + 56 9 1234 5678
+        </strong>
+        <strong>
+            contacto@rosalesspa.cl
+        </strong>
+    </div> -->
+    <div class="header-body">
+        <div class="logo">
+            <!-- <img src="img/logo.png" alt="Rosalesspa" width="200px"> -->
+            <a href="/">
+                Rosales SPA
+            </a>
+            
+        </div>
+        <input type="checkbox" id="side-menu" class="side-menu">
+        <label for="side-menu" class="hamb"><span class="hamb-line"></span></label>
+        <nav class="nav">
+            <ul class="menu">
+                <li><a href="/" class="menu-item">Inicio</a></li>
+                <li><a href="about-us" class="menu-item">Nosotros</a></li>
+                <li><a href="services" class="menu-item">Servicios</a></li>
+                <li><a href="contact-us" class="menu-item">Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
+
+</header>
+
+
+<style>
+    ul {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0;
+}
+    body{
+        margin: 0;
+        color: #ffffff;
+    }
+    header{
+        position: relative;
+        font-family: 'Kadwa', serif;
+    }
+    .nav{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        overflow: hidden;
+        max-height: 0;
+        transition:  max-height: 0.5s ease-out;
+    }
+    .anounce {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 30px;
+    }
+    .anounce strong{
+        padding: 10px;
+        color: #000000;
+    }
+    .logo a{
+        font-size: 25px;
+        text-decoration: none;
+        color: #ffffff;
+    }
+    .header-body{
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #003249;
+        align-items: center;
+        position: sticky;
+        padding: 1rem;
+        max-height: 6rem;
+        z-index: 10;
+        animation: headertop linear both;
+        animation-timeline: scroll(root block);
+    }
+    .menu{
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        gap: 70px;
+    }
+    .menu-item{
+        text-decoration: none;
+        color: #ffffff;
+        font-size: 18px;
+    }
+    @media screen and (max-width: 768px){
+        .header-body{
+        justify-content: space-between;
+    }
+    .menu{
+        flex-direction: column;
+    }
+    .menu-item{
+        font-size: 28px;
+    }
+    }
+
+    .menu-item:hover{
+        color: rgb(224, 184, 21);
+        transition: all .2s ease;
+    }
+    @keyframes headertop {
+        to {
+            position: sticky;
+            top: 0;
+        }
+    }
+.hamb{
+    cursor: pointer;
+    float: right;
+    padding: 10px 15px;
+}
+
+.hamb-line{
+    background-color: white;
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+}
+
+.hamb-line::before,
+.hamb-line::after{
+    background-color: white;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.hamb-line::before{
+    top: 6px;
+}
+
+.hamb-line::after{
+    top: -6px;
+}
+
+.side-menu{
+    display: none;
+}
+
+.side-menu:checked ~ nav{
+    max-height: 91.5%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    background: #003249f8;
+    text-transform: uppercase;
+    transition: all .5s ease;
+}
+
+.side-menu:checked ~ .hamb .hamb-line{
+    background: transparent;
+    z-index: 1;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::before{
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.side-menu:checked ~ .hamb .hamb-line::after{
+    transform: rotate(45deg);
+    top: 0;
+}
+
+@media (min-width: 768px){
+    .nav{
+        max-height: none;
+        position: relative;
+        float: right;
+        width: fit-content;
+    }
+    .hamb{
+        display: none;
+    }
+}
+</style>

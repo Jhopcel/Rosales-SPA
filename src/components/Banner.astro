@@ -1,0 +1,80 @@
+---
+interface props{
+    title: string;
+    text: string;
+    button?: string;
+    urlImage : string;
+}
+
+const {title, text, button, urlImage} = Astro.props;
+---
+
+
+<div class="banner-container" style={`background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${urlImage})`}>
+    <div class="banner-container-main" >
+        <h1 class="principal-title">{title}</h1>
+        <p class="text-info">{text}</p>
+        {
+            button ? <button class="buttom-tb">{button}</button> : ''
+        }
+    </div>
+</div>
+
+
+
+<style>
+    p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: unset;
+    font-weight: unset;
+    display: unset;
+}
+
+	.banner-container{
+		position: relative;
+		background-size: cover;
+		background-position: center;
+		width: 100%;
+		height: 500px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+        overflow: hidden;
+	}
+	.banner-container-main{
+		display: flex;
+		color: #ffffff;
+        font-family: 'Kadwa', serif;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		gap: 30px;
+		padding: 1rem;
+	}
+	.principal-title{
+		font-size: 3rem;
+        text-align: center;
+	}
+	.text-info{
+		font-size: 1.5rem;
+		color: #DEDEDE;
+        text-align: center;
+        text-wrap: balance;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        
+	}
+
+    @media screen and (max-width: 768px){
+		.principal-title{
+		font-size: 2rem;
+		}
+		.text-info{
+		font-size: 1rem;
+		color: #DEDEDE;
+		}
+	}
+</style>

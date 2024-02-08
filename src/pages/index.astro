@@ -1,0 +1,251 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Title from '../components/Title.astro';
+import Form from '../components/Form.astro';
+import Banner from '../components/Banner.astro';
+---
+
+<Layout title="Pagina principal Rosales SPA">
+	<main>
+		<Banner title="¡Mira nuestros últimos trabajos!"
+		text="Ofrecemos servicios de calidad a todos nuestros clientes, siempre cumpliendo a los plazos estimados y con gran profesionalismo." 
+		button="ver"
+		urlImage="public/pages-img/banner-index2.jpg"/>
+		<section class="container-section-service">
+			<Title title="SERVICIOS" />
+			<div class="container-service-items">
+				<div class="service-items">
+					<img src="public/pages-img/renovation.png" alt="">
+					<p>TERMINACIONES</p>
+					<a href="">Ver más</a>
+				</div>
+				<div class="service-items">
+					<img src="public/pages-img/varnish.png" alt="">
+					<p>DECORACIONES</p>
+					<a href="">Ver más</a>
+				</div>
+				<div class="service-items">
+					<img src="public/pages-img/paint-roller.png" alt="">
+					<p>PINTURA</p>
+					<a href="">Ver más</a>
+				</div>
+			</div>
+		</section>
+		<section class="our-works-container">
+			<Title title="NUESTROS TRABAJOS" />
+			<div class="work-image">
+				<div class="work-info">
+					<h2>
+						Valle Grande
+					</h2>
+					<p>
+						De la comuna de Lampa, con un equipo de pintores excepcionales y capacitados,
+						realizamos la tarea de pintar más de 120 casas por parte de la empresa Arquitectos Frow.
+					</p>
+					<button class="buttom-tb bottom">
+						Ver más
+					</button>
+				</div>
+			</div>
+		</section>
+		<section class="info-section">
+			<article class="section-paragraph">
+				<h2>TERMINACIONES</h2>
+				<p class="paragraph-info">ELorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit ipsum turpis, id rutrum libero tristique vitae. 
+					Pellentesque eu purus et nisl commodo lacinia nec ac mi. In diam ante, dignissim vitae efficitur vitae, lobortis id nisl. 
+					Cras ornare justo mi. Duis sagittis pharetra odio non pharetra. Praesent a nisl vehicula, laoreet dolor eu, pretium neque. 
+					Fusce dignissim sapien vitae felis ornare vulputate. Donec ut sapien faucibus justo euismod cursus ut sed sapien. Vestibulum facilisis urna at ipsum dictum convallis. 
+					Vestibulum sollicitudin fermentum ante, eget fringilla mauris pretium sed. Suspendisse ac placerat massa.
+					Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis dolor nibh, efficitur ut nisi dapibus, commodo tincidunt sem.</p>
+			</article>
+			<div class="image-info-section">
+				<img  src="public/pages-img/Terminaciones-imagen-index.webp" alt="">
+			</div>
+		</section>
+		<section class="info-section prefer">
+			<article class="section-paragraph">
+				<h2>ACABADOS</h2>
+				<p class="paragraph-info">ELorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus blandit ipsum turpis, id rutrum libero tristique vitae. 
+					Pellentesque eu purus et nisl commodo lacinia nec ac mi. In diam ante, dignissim vitae efficitur vitae, lobortis id nisl. 
+					Cras ornare justo mi. Duis sagittis pharetra odio non pharetra. Praesent a nisl vehicula, laoreet dolor eu, pretium neque. 
+					Fusce dignissim sapien vitae felis ornare vulputate. Donec ut sapien faucibus justo euismod cursus ut sed sapien. Vestibulum facilisis urna at ipsum dictum convallis. 
+					Vestibulum sollicitudin fermentum ante, eget fringilla mauris pretium sed. Suspendisse ac placerat massa.
+					Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Duis dolor nibh, efficitur ut nisi dapibus, commodo tincidunt sem.</p>
+			</article>
+			<div class="image-info-section">
+				<img  src="public/pages-img/Terminaciones-imagen-index.webp" alt="">
+			</div>
+		</section>
+		
+        <section class="form-section-main">
+			<Title title='CONTACTO' />
+			<div class="form-section">
+				<div class="section-info-contact">
+					<div class="info-contact">
+						<h2>TELEFONO</h2>
+						<span>+56 9 3223 9223</span>
+					</div>
+					<div class="info-contact">
+						<h2>EMAIL</h2>
+						<span>contacto@rosalesspa.cl</span>
+					</div>
+				</div>
+					<Form/>
+			</div>
+        </section>
+		<span class="whatsapp-icon">
+			<img src="public/pages-img/whatsapp.png" alt="">
+		</span>
+	</main>
+</Layout>
+
+<style>
+	.container-section-service{
+		margin-top: 10rem;
+	}
+	.container-service-items{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 10em;
+		margin: 50px;
+		flex-wrap: wrap;
+	}
+	.service-items{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 250px;
+		height: 320px;
+		/* box-shadow:  0px 0px 10px #002b6865,
+            0px 0px 10px #002b6875; */
+		font-family: 'Inknut Antiqua', serif;
+		gap: 1rem;
+		font-size: 1rem;
+	}
+	.service-items a{
+		font-size: 16px;
+		color: #003249;
+	}
+	.service-items a:hover{
+		color: #007EA7;
+		transition: all .2s ease;
+	}
+	.our-works-container{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin-top: 5rem;
+		padding: 1.5rem;
+	}
+	.work-image{
+		background-image: url('public/pages-img/valle-grande.jpg');
+		background-size: cover;
+		background-position: center;
+		display: flex;
+		justify-content: left;
+		align-items: center;
+		padding: 3rem;
+	}
+	.work-info{
+		max-width: 800px;
+		background-color: #00000085;
+		height: 400px;
+		font-family: 'Inknut Antiqua', serif;
+		color: #ffffff;
+		padding: 2rem;
+		box-sizing: border-box;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		overflow: hidden;
+	}
+	.work-info h2{
+		font-size: 2rem;
+	}
+	.work-info p{
+		font-size: 1rem;
+		overflow: hidden;
+		text-wrap: balance;
+	}
+	@media screen and (max-width: 768px){
+		.container-section-service{
+		margin-top: 4rem;
+	}
+		.container-service-items{
+		gap: 1rem;
+	}
+	.our-works-container{
+		margin-top: 3rem;
+	}
+		.work-image{
+		padding: 1.5rem;
+	}
+		.work-info{
+		padding: 1.5rem;
+	}
+		.work-info h2{
+	font-size: 1.5rem;
+	}
+		.work-info p{
+		font-size: 0.8rem;
+		overflow: visible;
+	}
+	}
+	.bottom{
+		align-self: flex-end;
+	}
+	.form-section-main{
+		margin-top: 6rem;
+	}
+    .form-section{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: row;
+		flex-wrap: wrap;
+		margin-top: 1rem;
+		margin-bottom: 4rem;
+		padding: 2rem;
+		gap: 8rem;
+    }
+    .section-info-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #ffffff;
+        background-color: #003249;
+        width: 300px;
+        height: 300px;
+        gap: 1rem;
+        box-sizing: border-box;
+        padding: 2rem;
+        align-self: flex-start;
+    }
+    .info-contact{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .info-contact h2{
+        font-family: 'Inknut Antiqua', serif;
+    }
+	.whatsapp-icon{
+		position: fixed;
+		width: 4rem;
+		height: 4rem;
+		bottom: 0;
+		right: 0;
+		margin: 1rem;
+		z-index: 100;
+	}
+	.whatsapp-icon img{
+		width: 100%;
+		height: 100%;
+	}
+</style>

@@ -1,0 +1,67 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Banner from '../components/Banner.astro';
+import Form from '../components/Form.astro';
+---
+
+
+<Layout title='Página sobre nosotros'>
+    <main>
+        <Banner title="CONTACTO"
+        text="En esta sección encontrarás la forma de contactarnos, ya sea para solicitar información, cotizaciones o cualquier otra consulta. Tendrás la opción de llamarnos o mandarnos un mensaje directo mediante el siguiente formulario"
+        urlImage="public/pages-img/banner-contact.webp"/>
+    
+        <section class="form-section">
+            <div class="section-info-contact">
+                <div class="info-contact">
+                    <h2>TELEFONO</h2>
+                    <span>+56 9 3223 9223</span>
+                </div>
+                <div class="info-contact">
+                    <h2>EMAIL</h2>
+                    <span>contacto@rosalesspa.cl</span>
+                </div>
+            </div>
+                <Form/>
+        </section>
+    </main>
+</Layout>
+
+<style>
+    .form-section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    margin-bottom: 4rem;
+    padding: 2rem;
+    gap: 8rem;
+    margin-top: 4rem;
+    }
+    .section-info-contact{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        color: #ffffff;
+        background-color: #003249;
+        width: 300px;
+        height: 300px;
+        gap: 1rem;
+        box-sizing: border-box;
+        padding: 2rem;
+        align-self: flex-start;
+    }
+    .info-contact{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        width: 100%;
+    }
+    .info-contact h2{
+        font-family: 'Inknut Antiqua', serif;
+    }
+</style>
